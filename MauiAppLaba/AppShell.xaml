@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiAppLaba.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiAppLaba"
+    xmlns:view="clr-namespace:MauiAppLaba.View"
+    Title="MauiAppLaba">
+
+    <Shell.FlyoutHeader>
+        <Grid>
+            <Label Text="Menu" />
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Laba 1">
+        <ShellContent
+            Title="Laba 1"
+            ContentTemplate="{DataTemplate view:PhonewordTranslatorView}"
+            Route="LabaOne" />
+    </FlyoutItem>
+    <FlyoutItem Title="Laba 2">
+        <Tab Title="Notes">
+            <ShellContent Title="Notes" ContentTemplate="{DataTemplate view:AllNotesPageView}" />
+
+            <ShellContent
+                Title="About"
+                ContentTemplate="{DataTemplate view:AboutPageView}"
+                Route="About" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Laba 3">
+        <ShellContent
+            Title="Laba 3"
+            ContentTemplate="{DataTemplate view:PhonewordTranslatorView}"
+            Route="LabaThree" />
+    </FlyoutItem>
+
+
+</Shell>

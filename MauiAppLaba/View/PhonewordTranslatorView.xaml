@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppLaba.View.PhonewordTranslatorView"
+             xmlns:vm="clr-namespace:MauiAppLaba.ViewModel.LabOneViewModel"
+             Title="PhonewordTranslatorView"
+             x:DataType="vm:PhonewordTranslatorViewModel">
+
+
+    <VerticalStackLayout Spacing="15" Padding="20">
+        <Label Text = "Наберите номер"
+               FontSize ="20"/>
+        <Entry x:Name = "PhoneNumberText"
+               Text = "{Binding PhoneNumber}" />
+        <Button x:Name = "TranslateButton"
+                Text = "Translate"
+                Command="{Binding TranslateComand}"
+                />
+        <Button x:Name = "CallButton"
+                Text = "{Binding CallBttText}"
+                IsEnabled = "{Binding IsCallBttEnable}"
+                Command="{Binding CallBtnComand}"
+                />
+    </VerticalStackLayout>
+</ContentPage>
